@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+
+<% if(!locals.dgname) { %>
+<h1> Generate a 🐶 name :)</h1>
+<% } else { %>
+<h1><%= dgname %></h1>
+<% } %>
+<form action="/submit" method="post">
+    <input type="submit" value="Generate Name"/>
+</form>
+
+<%- include("partials/footer.ejs") %>
